@@ -1,0 +1,361 @@
+/* style.css */
+
+/* 重置所有元素的默认边距和填充 */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* 使元素的宽度和高度包括内边距和边框 */
+}
+
+/* 移除列表的标记 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 移除链接的默认样式 */
+a {
+  text-decoration: none;
+  color: inherit; /* 链接颜色与父元素相同 */
+}
+
+/* 移除按钮和输入字段的默认轮廓和内边距 */
+button,
+input {
+  outline: none;
+  padding: 0;
+}
+
+/* 使所有输入字段和按钮具有统一的字体继承特性 */
+input,
+button,
+textarea,
+select {
+  font-family: inherit; /* 从父元素继承字体 */
+  font-size: inherit; /* 从父元素继承字号 */
+}
+
+/* 重置表格单元格的内边距和边框 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 重置图片的最大宽度为100%，使其不超出容器宽度 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 重置按钮默认样式 */
+button.custom-button {
+    background-color: transparent; /* 透明背景 */
+    border: 2px solid #3894FF; /* 蓝色边框 */
+    color: #3894FF; /* 文字颜色为蓝色 */
+    font-size: 16px; /* 字体大小 */
+    padding: 8px 30px; /* 内边距 */
+    cursor: pointer; /* 鼠标悬停时显示手形图标 */
+    outline: none; /* 点击时不显示轮廓 */
+    transition: all 0.3s ease; /* 平滑过渡效果 */
+    display: inline-block; /* 使元素内联显示并允许设置宽度和高度 */
+    text-align: center; /* 文字居中 */
+    text-decoration: none; /* 防止文本下划线 */
+    border-radius: 5px; /* 边框圆角 */
+}
+  
+/* 鼠标悬停效果 */
+button.custom-button:hover {
+    background-color: #0000ff; /* 鼠标悬停时背景变为蓝色 */
+    color: #ffffff; /* 鼠标悬停时文字颜色变为白色 */
+}
+
+button.custom-button-rev {
+  background-color: #3894FF; /* 透明背景 */
+  border: 2px solid #3894FF; /* 蓝色边框 */
+  color: #ffffff; /* 文字颜色为蓝色 */
+  font-size: 16px; /* 字体大小 */
+  padding: 8px 30px; /* 内边距 */
+  cursor: pointer; /* 鼠标悬停时显示手形图标 */
+  outline: none; /* 点击时不显示轮廓 */
+  transition: all 0.3s ease; /* 平滑过渡效果 */
+  display: inline-block; /* 使元素内联显示并允许设置宽度和高度 */
+  text-align: center; /* 文字居中 */
+  text-decoration: none; /* 防止文本下划线 */
+  border-radius: 5px; /* 边框圆角 */
+}
+
+/* 清除浮动 */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* 常用布局类 */
+.container {
+  width: 100%;
+  max-width: 1440px; /* 可以根据需要调整最大宽度 */
+  margin: 0 auto; /* 水平居中 */
+  padding: 15px; /* 可选的内边距 */
+  margin: 0 auto;
+  padding: 0;
+  color: #000;;
+}
+
+/* 响应式图片类 */
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 辅助类 - 文本对齐 */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* 辅助类 - 显示和隐藏元素 */
+.show { display: block; }
+.hide { display: none; }
+
+/* 辅助类 - 浮动 */
+.float-left { float: left; }
+.float-right { float: right; }
+
+/* 移除链接的默认样式 */
+.pl60 {
+    padding-left: 60px; /* 链接颜色与父元素相同 */
+}
+.p0120{
+    padding: 0 120px;
+}
+.mt110{
+  margin: 110px 0px 0px 0px;
+}
+.p110{
+  margin: 110px 0px 0px 0px;
+}
+
+/* 辅助类 - 清除浮动后的元素 */
+.clearfix {
+  overflow: auto;
+}
+
+/* 媒体查询示例 */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  /* 针对移动设备的其他样式调整 */
+}
+
+
+.header-content {
+    display: flex; /* 启用 Flexbox 布局 */
+    justify-content: space-between; /* 元素之间的空间平均分布 */
+    align-items: center; /* 垂直居中对齐 */
+    height: 120px; 
+}
+
+.company-name
+{
+  padding-left: 120px;
+}
+
+.navigation{
+  padding-right: 120px;
+}
+
+.navigation .active{
+  color: #3894FF;
+}
+
+.navigation ul {
+    display: flex; /* 使导航栏使用 Flexbox 布局 */
+}
+
+.navigation ul li {
+    margin-left: 96px; /* 列表项之间的间距 */
+}
+
+.top-banner{
+    height: 600px;
+    background-image: url('./img/top-banner@1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    clear: both;
+}
+
+.top-banner .content
+{
+    width: 55%;
+    height: 100%;
+    background-color: #5A9EE4;
+    font-size: 28px;
+    color: #ffffff;
+    background-color: rgb(82,140,192,40%)
+}
+
+.top-banner .content .title
+{
+    padding-top: 155px;
+    font-size: 60px;
+    color: #ffffff;
+}
+
+.top-banner .content .desc
+{
+    margin-top: 25px;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: left;
+}
+
+.top-banner .content .more
+{
+    margin-top: 25px;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.content-service
+{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-service-item
+{
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* 清除浮动 */
+    font-style: normal;
+    font-family: 'Courier New', Courier, monospace;
+    display: block;
+    clear: both;
+}
+
+/* .content-service-item image{
+    width: 100%;
+    height: 100%;
+    background-color: red;
+} */
+
+.content-service-item .word{
+    margin-top: 69px;
+    box-sizing: border-box; /* 边框计算在宽度内 */
+}
+
+.content-service-item .word .intro{
+    margin-top: 13px;
+}
+.content-service-item .word .desc{
+    margin-top: 13px;
+}
+.content-service-item .word .desc .more{
+    box-sizing: border-box; /* 边框计算在宽度内 */
+    margin-top: 13px;
+}
+
+.content-service-item .picture{
+    height: 100%;
+    box-sizing: border-box; /* 边框计算在宽度内 */
+}
+
+.custom-case{
+    background-color: #F2F2F2;
+    text-align: center;
+    padding-bottom: 120px;
+}
+
+.custom-case .title
+{
+    padding: 110px 0 55px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #000000;
+}
+
+.custom-case .title
+{
+    padding: 110px 0 55px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #000000;
+}
+
+.custom-case .more{
+  box-sizing: border-box; /* 边框计算在宽度内 */
+  margin-top: 50px;
+}
+/* 
+.image-row {
+  display: flex;
+  justify-content: space-between; /* 使图片间隔均匀分布 */
+
+ .custom-example .title
+{
+    padding: 20px 0 55px 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #000000;
+}
+ 
+.custom-example .image-row
+{
+  display: flex;
+  justify-content: space-between; /* 图片间间隔均匀分布 */
+  align-items: center; /* 如果需要，垂直居中图片 */
+}
+.custom-example .image-row .image-border
+{
+    border: #BBBBBB 1.5px solid;
+    padding: 5px;
+    margin: 10px;/* 图片外边距，左右各10px */
+}
+
+.custom-example img{
+  width: auto; /* 保持图片原始尺寸 */
+  height: auto; /* 保持图片原始尺寸 */
+}
+
+.service-guarantee{
+    background-color: #494949;
+    text-align: center;
+    padding-bottom: 120px;
+}
+
+.service-guarantee .title{
+  font-size: 36px;
+  padding: 60px 0 20px 0; 
+  color: #ffffff;
+}
+.service-guarantee .desc{
+  font-size: 20px;
+  color: #ffffff;
+}
+.service-guarantee .more{
+  box-sizing: border-box; /* 边框计算在宽度内 */
+  margin-top: 50px;
+}
+
+.footer{
+  background-color: #000000;
+  height: 500px;
+}
