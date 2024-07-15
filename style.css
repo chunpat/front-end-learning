@@ -217,8 +217,8 @@ button.custom-button-rev {
 
 .top-banner .content .more
 {
-    margin-top: 25px;
-    font-size: 20px;
+    margin-top: 40px;
+    font-size: 14px;
     color: #ffffff;
 }
 
@@ -336,9 +336,10 @@ button.custom-button-rev {
 }
 
 .service-guarantee{
-    background-color: #494949;
-    text-align: center;
-    padding-bottom: 120px;
+  width: 100%;
+  background-color: #494949;
+  text-align: center;
+  padding-bottom: 50px;
 }
 
 .service-guarantee .title{
@@ -358,4 +359,49 @@ button.custom-button-rev {
 .footer{
   background-color: #000000;
   height: 500px;
+  color: #ffffff;
+  display: flex; /* 使用 Flexbox 布局 */
+  justify-content: space-between; /* 子元素之间的间隔均匀分布 */
+  margin: 0 auto; /* 水平居中 */
+  padding-top: 100px;
+}
+
+.footer-column-contact{
+  flex: 2; /* 每个列占据平均空间 */
+  padding: 10px; /* 内边距 */
+}
+.footer-column-about{
+  flex: 1; /* 每个列占据平均空间 */
+  padding: 10px; /* 内边距 */
+}
+.footer-column-products{
+  flex: 1; /* 每个列占据平均空间 */
+  padding: 10px; /* 内边距 */
+}
+/* 底部列标题样式 */
+.footer-column-contact h3 {
+  color: #FFFFFF; /* 标题颜色 */
+  font-size: 20px; /* 标题字号 */
+  margin-bottom: 20px; /* 标题与内容之间的间隔 */
+}
+.footer-column-about h3,.footer-column-products h3 {
+  color: #FFFFFF; /* 标题颜色 */
+  font-size: 16px; /* 标题字号 */
+  margin-bottom: 30px; /* 标题与内容之间的间隔 */
+}
+.footer-column-about p,.footer-column-products p{
+  margin: 14px 0;
+}
+
+.circle-wrapper{
+  width: 40px; /* 圆形包装器的宽度 */
+  height: 40px; /* 圆形包装器的高度 */
+  border-radius: 50%; /* 设置为50%以创建圆形 */
+  margin: 14px 14px 0 0;
+  overflow: hidden; /* 隐藏超出圆形部分的内容 */
+  display: inline-block; /* 使其能够设置宽高 */
+  visibility: visible;
+  border: #E3E3E3 1px solid;
+  text-align: center;
+  line-height: 40px; /* 与容器高度相同的行高 */
 }
